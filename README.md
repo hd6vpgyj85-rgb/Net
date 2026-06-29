@@ -35,7 +35,7 @@ Haz **doble clic** en el archivo **`index.html`**. Se abre en tu navegador
 Casi todo lo editable está en **un solo archivo**:
 
 ```
-lib/manifest.js
+lib/hinetly-manifest.js
 ```
 
 Ábrelo con el **Bloc de notas** (Windows) o **TextEdit** (Mac), o cualquier
@@ -44,7 +44,7 @@ comillas, las comas `,` ni las llaves `{ }`.
 
 ### Cambiar tu número de WhatsApp  ⭐ (lo más importante)
 
-Busca dentro de `lib/manifest.js` el bloque `contacto:` y edita:
+Busca dentro de `lib/hinetly-manifest.js` el bloque `contacto:` y edita:
 
 ```js
 whatsapp: "521234567890",            // ← tu número, con código de país y SIN +, espacios ni signos
@@ -91,7 +91,7 @@ En el bloque `portafolio:` cada proyecto es un grupo `{ ... }`:
 
 ### Cambiar el proceso, Instagram, horario, eslogan…
 
-Todo está en `lib/manifest.js`, en bloques con nombres claros: `proceso`,
+Todo está en `lib/hinetly-manifest.js`, en bloques con nombres claros: `proceso`,
 `contacto`, `brand`. Edita el texto entre comillas y guarda.
 
 ---
@@ -113,14 +113,14 @@ El navegador guarda copias en caché. Soluciones, en orden:
 ## 5. Qué hay en cada carpeta
 
 ```
-index.html            La página (contenido principal, ya escrito).
-styles/main.css       El diseño (colores, tipografías, animaciones).
-lib/manifest.js       ⭐ TUS DATOS editables (textos, precios, WhatsApp…).
-lib/main.js           Las animaciones e interacciones.
-lib/gsap.min.js       Librería de animación (local, no usa internet).
-lib/ScrollTrigger.min.js  Animaciones al hacer scroll (local).
-assets/portfolio/     Imágenes de los proyectos del portafolio.
-.htaccess             Ajustes del servidor (caché, seguridad). Opcional.
+index.html                       La página (contenido principal, ya escrito).
+styles/hinetly.css               El diseño (colores, tipografías, animaciones).
+lib/hinetly-manifest.js          ⭐ TUS DATOS editables (textos, precios, WhatsApp…).
+lib/hinetly-main.js              Las animaciones e interacciones.
+lib/hinetly-gsap.min.js          Librería de animación (local, no usa internet).
+lib/hinetly-scrolltrigger.min.js Animaciones al hacer scroll (local).
+assets/portfolio/                Imágenes de los proyectos del portafolio.
+.htaccess                        Ajustes del servidor (caché, seguridad). Opcional.
 ```
 
 ---
