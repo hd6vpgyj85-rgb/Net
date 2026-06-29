@@ -1,0 +1,51 @@
+# ============================================================================
+# HINETLY · .htaccess  (Apache / Hostinger)
+# Sitio estático. Mejora caché, compresión y seguridad básica.
+# Si algo falla en tu hosting, puedes borrar este archivo: la web sigue.
+# ============================================================================
+
+# ---- Página de inicio ----
+DirectoryIndex index.html
+
+# ---- Compresión GZIP ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE image/svg+xml application/json
+</IfModule>
+
+# ---- Tipos MIME correctos ----
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType text/javascript .js
+</IfModule>
+
+# ---- Caché del navegador ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  # El HTML no se cachea agresivamente para que veas cambios pronto
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ---- Cabeceras de seguridad básicas ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---- Forzar HTTPS (opcional; descomenta si tu dominio ya tiene SSL) ----
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+# </IfModule>
+
+# ---- Páginas de error: vuelven al inicio ----
+ErrorDocument 404 /index.html
