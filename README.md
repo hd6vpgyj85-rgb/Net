@@ -101,13 +101,12 @@ Todo está en `lib/manifest.js`, en bloques con nombres claros: `proceso`,
 El navegador guarda copias en caché. Soluciones, en orden:
 
 1. Pulsa **Ctrl + F5** (Windows) o **Cmd + Shift + R** (Mac) para recargar
-   forzado.
-2. Si aún no cambia, abre **`index.html`** con el Bloc de notas y **sube el
-   número de versión** `?v=20260629` a otra fecha, por ejemplo `?v=20260630`,
-   en **todas** las líneas donde aparezca (al final de cada `styles/...` y
-   `lib/...`). Guarda y vuelve a subir el archivo.
-
-Eso obliga al navegador a cargar la versión nueva.
+   forzado. En el móvil, cierra la pestaña y vuelve a abrirla.
+2. En Hostinger, los archivos CSS y JS están configurados (en `.htaccess`)
+   para refrescarse en **1 hora** como máximo, así que tus cambios aparecen
+   solos al poco rato.
+3. Si usas la **caché de Hostinger** (LiteSpeed), vacíala desde el panel:
+   *Sitios web → Administrar → Caché → Purgar todo*.
 
 ---
 
