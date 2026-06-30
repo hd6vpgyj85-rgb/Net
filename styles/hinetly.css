@@ -212,6 +212,22 @@ section{position:relative}
   position:absolute;width:80vmax;height:80vmax;top:-30vmax;right:-20vmax;
   background:radial-gradient(circle, rgba(30,63,227,.28), transparent 60%);
   filter:blur(20px);pointer-events:none;z-index:0}
+/* Foto de portada (Garfield). Si el archivo no existe, queda fondo oscuro. */
+.hero__media{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url("../assets/products/portada-garfield.jpg");
+  background-repeat:no-repeat;background-size:cover;
+  background-position:50% 16%}
+.hero__media::after{content:"";position:absolute;inset:0;
+  /* En móvil: oscurece todo para que el texto se lea */
+  background:linear-gradient(180deg, rgba(10,10,15,.45) 0%, rgba(10,10,15,.78) 60%, var(--black) 100%)}
+@media (min-width:900px){
+  /* En PC/horizontal: la foto va a la derecha y el texto a la izquierda */
+  .hero__media{left:auto;right:0;width:min(50%,820px);
+    background-position:center center}
+  .hero__media::after{
+    background:linear-gradient(90deg, var(--black) 0%, rgba(10,10,15,.72) 32%, rgba(10,10,15,.12) 100%)}
+}
 .hero__kicker{
   position:relative;z-index:2;font-size:clamp(12px,1.4vw,15px);
   text-transform:uppercase;letter-spacing:.22em;color:var(--muted);
@@ -329,6 +345,30 @@ section{position:relative}
   color:var(--king-bright);padding:6px 12px;border:1px solid var(--line);border-radius:100px;
   background:rgba(10,10,15,.5)}
 
+/* --------------------------- TIENDA · peluches -------------------------- */
+.shop__grid{
+  position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;
+  padding:0 var(--pad) clamp(60px,8vw,110px);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,26px)}
+.prod-card{
+  display:flex;flex-direction:column;border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);background:linear-gradient(160deg,var(--panel),var(--black-2));
+  transition:transform .5s var(--ease),border-color .4s,box-shadow .5s}
+.prod-card:hover{transform:translateY(-6px);border-color:var(--king-bright);
+  box-shadow:0 40px 70px -42px rgba(30,63,227,.5)}
+.prod-card__img{
+  aspect-ratio:4/5;background-size:cover;
+  background-position:center;background-repeat:no-repeat;
+  /* Estado vacío (antes de subir la foto): degradado sutil de marca */
+  background-color:#15161d;
+  background-image:linear-gradient(150deg,#191b26,#0e0f16)}
+.prod-card__info{padding:18px 20px 22px;display:flex;flex-direction:column;gap:14px}
+.prod-card__row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.prod-card__name{font-family:var(--serif);font-weight:500;
+  font-size:clamp(18px,1.9vw,24px);color:var(--white);line-height:1.05}
+.prod-card__price{font-size:14px;color:var(--king-bright);white-space:nowrap}
+.prod-card__cta{align-self:stretch;justify-content:center;font-size:14px;padding:12px 18px}
+
 /* ------------------------- PROCESO · scrolling cards -------------------- */
 .proc{
   position:relative;z-index:2;
@@ -416,6 +456,7 @@ section{position:relative}
 /* ------------------------------ RESPONSIVE ------------------------------ */
 @media (max-width:1080px){
   .work-card,.work-card:nth-child(1),.work-card:nth-child(2){grid-column:span 3}
+  .shop__grid{grid-template-columns:repeat(2,1fr)}
   .contact__grid{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr 1fr}
 }
@@ -434,6 +475,11 @@ section{position:relative}
   .svc-card__media{min-height:200px;border-right:none;border-bottom:1px solid var(--line)}
   .svc-icon{width:120px;padding:30px 0}
   .work-card,.work-card:nth-child(1),.work-card:nth-child(2){grid-column:span 6}
+  .shop__grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .prod-card__info{padding:14px 14px 16px;gap:10px}
+  .prod-card__row{flex-direction:column;align-items:flex-start;gap:3px}
+  .prod-card__name{font-size:16px}
+  .prod-card__cta{font-size:13px;padding:11px 12px}
   .pcard{grid-template-columns:1fr;gap:6px;align-items:start;min-height:clamp(220px,52vh,360px)}
   .pcard__idx{font-size:clamp(56px,20vw,90px)}
   .footer__grid{grid-template-columns:1fr}
