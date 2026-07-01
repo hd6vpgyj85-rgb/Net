@@ -94,6 +94,19 @@ En el bloque `portafolio:` cada proyecto es un grupo `{ ... }`:
 Todo está en `lib/hinetly-manifest.js`, en bloques con nombres claros: `proceso`,
 `contacto`, `brand`. Edita el texto entre comillas y guarda.
 
+### Plantillas por sector (sección "Plantillas")
+
+Están en el bloque `plantillas` de `lib/hinetly-manifest.js`. Cada **sector**
+(Restaurantes, Estéticas…) tiene una lista `items` con las plantillas, y cada
+plantilla es `{ nombre: "...", url: "..." }`. Al hacer clic en un sector se
+muestran sus plantillas; cada tarjeta abre el sitio en una pestaña nueva.
+
+- Para **añadir una plantilla** a un sector: copia una línea
+  `{ nombre: "...", url: "..." }` dentro de su `items` (con una coma antes).
+- Para **añadir un sector nuevo**: copia un bloque `{ id, sector, items }`
+  completo. El `id` va sin espacios ni acentos (ej. `"mascotas"`).
+- El aviso de "imágenes hechas con IA" se edita en `notaPlantillasIA`.
+
 ### Tienda de peluches (sección "Tienda") y foto de portada  🧸
 
 Los peluches a la venta están en el bloque `productos` de

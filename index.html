@@ -49,9 +49,10 @@
   <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
     <a href="#servicios" data-cursor="explorar"><i>01</i> Servicios</a>
     <a href="#portafolio" data-cursor="ver"><i>02</i> Portafolio</a>
-    <a href="#tienda" data-cursor="ver"><i>03</i> Tienda</a>
-    <a href="#proceso" data-cursor="proceso"><i>04</i> Proceso</a>
-    <a href="#contacto" data-cursor="enviar"><i>05</i> Contacto</a>
+    <a href="#plantillas" data-cursor="ver"><i>03</i> Plantillas</a>
+    <a href="#tienda" data-cursor="ver"><i>04</i> Tienda</a>
+    <a href="#proceso" data-cursor="proceso"><i>05</i> Proceso</a>
+    <a href="#contacto" data-cursor="enviar"><i>06</i> Contacto</a>
   </nav>
   <a class="nav__cta" data-wa data-cursor="cotizar"
      href="https://wa.me/5216568596503?text=Hola%20Hinetly%2C%20quiero%20cotizar%20una%20web%20para%20mi%20negocio.">
@@ -239,30 +240,76 @@
           <span class="work-card__type mono">Tienda online</span>
         </div>
       </a>
-      <a class="work-card" href="https://sunny-crostata-82248f.netlify.app/" target="_blank" rel="noopener" data-cursor="ver">
-        <div class="work-card__img"><img src="assets/portfolio/sunny.webp" alt="Sunny — landing" loading="lazy" /></div>
-        <div class="work-card__meta">
-          <span class="work-card__name">Sunny</span>
-          <span class="work-card__type mono">Landing</span>
-        </div>
-      </a>
-      <a class="work-card" href="https://willowy-cassata-a92e97.netlify.app/" target="_blank" rel="noopener" data-cursor="ver">
-        <div class="work-card__img"><img src="assets/portfolio/willowy.webp" alt="Willowy — landing" loading="lazy" /></div>
-        <div class="work-card__meta">
-          <span class="work-card__name">Willowy</span>
-          <span class="work-card__type mono">Landing</span>
-        </div>
-      </a>
     </div>
   </section>
 
-  <!-- ======================== 03 · TIENDA ========================= -->
-  <section class="shop" id="tienda">
+  <!-- ====================== 03 · PLANTILLAS ======================= -->
+  <section class="tpl" id="plantillas">
     <div class="section__watermark" aria-hidden="true">03</div>
 
     <div class="section__head">
       <div class="section__heading">
-        <span class="section__tag mono">[ 03 — Tienda ]</span>
+        <span class="section__tag mono">[ 03 — Plantillas ]</span>
+        <h2 class="section__title reveal" data-split>
+          Plantillas <em>por sector.</em>
+        </h2>
+      </div>
+      <p class="section__note reveal" data-split>
+        Elige un sector y abre las plantillas listas para adaptar a tu negocio.
+      </p>
+    </div>
+
+    <div class="tpl__wrap">
+      <!-- Selector de sectores -->
+      <div class="tpl__tabs" id="tplTabs" role="tablist">
+        <button class="tpl__tab is-active" type="button" data-tab="restaurantes" data-cursor="ver">
+          <span class="tpl__tab-idx mono">01</span>
+          <span class="tpl__tab-name">Restaurantes</span>
+          <span class="tpl__tab-count mono">2</span>
+        </button>
+        <button class="tpl__tab" type="button" data-tab="esteticas" data-cursor="ver">
+          <span class="tpl__tab-idx mono">02</span>
+          <span class="tpl__tab-name">Estéticas</span>
+          <span class="tpl__tab-count mono">1</span>
+        </button>
+      </div>
+
+      <p class="tpl__ai mono">
+        <span aria-hidden="true">✳</span> Las imágenes de las plantillas están hechas con IA para mejorar la interfaz.
+      </p>
+
+      <!-- Paneles por sector -->
+      <div class="tpl__panels" id="tplPanels">
+        <div class="tpl__panel is-active" data-panel="restaurantes">
+          <a class="tpl-card" href="https://6a4570d1c1944419fc79c705--ephemeral-frangollo-774ee1.netlify.app/" target="_blank" rel="noopener" data-cursor="ver">
+            <span class="tpl-card__idx mono">Restaurantes · 01</span>
+            <span class="tpl-card__name">Plantilla de restaurante 01</span>
+            <span class="tpl-card__go">Ver plantilla <b aria-hidden="true">→</b></span>
+          </a>
+          <a class="tpl-card" href="https://6a456365d14001baef8f149c--bright-gumdrop-27da0e.netlify.app/" target="_blank" rel="noopener" data-cursor="ver">
+            <span class="tpl-card__idx mono">Restaurantes · 02</span>
+            <span class="tpl-card__name">Plantilla de restaurante 02</span>
+            <span class="tpl-card__go">Ver plantilla <b aria-hidden="true">→</b></span>
+          </a>
+        </div>
+        <div class="tpl__panel" data-panel="esteticas">
+          <a class="tpl-card" href="https://superlative-stroopwafel-5f11db.netlify.app/" target="_blank" rel="noopener" data-cursor="ver">
+            <span class="tpl-card__idx mono">Estéticas · 01</span>
+            <span class="tpl-card__name">Plantilla de estética 01</span>
+            <span class="tpl-card__go">Ver plantilla <b aria-hidden="true">→</b></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 04 · TIENDA ========================= -->
+  <section class="shop" id="tienda">
+    <div class="section__watermark" aria-hidden="true">04</div>
+
+    <div class="section__head">
+      <div class="section__heading">
+        <span class="section__tag mono">[ 04 — Tienda ]</span>
         <h2 class="section__title reveal" data-split>
           Peluches <em>a la venta.</em>
         </h2>
@@ -335,13 +382,13 @@
     </div>
   </section>
 
-  <!-- ======================= 04 · PROCESO ========================= -->
+  <!-- ======================= 05 · PROCESO ========================= -->
   <section class="process" id="proceso">
-    <div class="section__watermark" aria-hidden="true">04</div>
+    <div class="section__watermark" aria-hidden="true">05</div>
 
     <div class="section__head">
       <div class="section__heading">
-        <span class="section__tag mono">[ 04 — Proceso ]</span>
+        <span class="section__tag mono">[ 05 — Proceso ]</span>
         <h2 class="section__title reveal" data-split>
           Cómo <em>trabajamos.</em>
         </h2>
@@ -395,13 +442,13 @@
     </div>
   </section>
 
-  <!-- ======================= 05 · CONTACTO ======================== -->
+  <!-- ======================= 06 · CONTACTO ======================== -->
   <section class="contact" id="contacto">
-    <div class="section__watermark" aria-hidden="true">05</div>
+    <div class="section__watermark" aria-hidden="true">06</div>
 
     <div class="contact__grid">
       <div class="contact__main">
-        <span class="section__tag mono">[ 05 — Contacto ]</span>
+        <span class="section__tag mono">[ 06 — Contacto ]</span>
         <h2 class="contact__title reveal" data-split>
           Cotiza tu proyecto <br /><em>por WhatsApp.</em>
         </h2>
@@ -463,6 +510,7 @@
     <div class="footer__col">
       <span class="footer__k mono">Sitio</span>
       <a href="#portafolio" data-cursor="ver">Portafolio</a>
+      <a href="#plantillas" data-cursor="ver">Plantillas</a>
       <a href="#tienda" data-cursor="ver">Tienda</a>
       <a href="#proceso" data-cursor="proceso">Proceso</a>
     </div>
