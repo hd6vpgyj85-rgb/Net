@@ -107,32 +107,6 @@ muestran sus plantillas; cada tarjeta abre el sitio en una pestaña nueva.
   completo. El `id` va sin espacios ni acentos (ej. `"mascotas"`).
 - El aviso de "imágenes hechas con IA" se edita en `notaPlantillasIA`.
 
-### Tienda de peluches (sección "Tienda") y foto de portada  🧸
-
-Los peluches a la venta están en el bloque `productos` de
-`lib/hinetly-manifest.js` (nombre, precio e imagen de cada uno). Para añadir o
-quitar uno, copia/borra su grupo `{ ... }`, igual que en el portafolio.
-
-**Las fotos van en la carpeta `assets/products/`** con estos nombres exactos:
-
-```
-portada-garfield.jpg   ← foto de PORTADA (fondo del hero)
-cinnamoroll.jpg        ← peluche Cinnamoroll Conejito
-snoopy.jpg             ← peluche Snoopy
-osito.jpg              ← peluche Osito Caramelo
-conejito.jpg           ← peluche Conejito Blanco
-```
-
-- Si una foto todavía no está, **el sitio no se rompe**: el hero se ve oscuro y
-  la tarjeta del peluche muestra un recuadro vacío hasta que subas la imagen.
-- Si quieres usar otro nombre de archivo o `.png` en vez de `.jpg`, cámbialo
-  también en `lib/hinetly-manifest.js` (campo `imagen`). Para la **portada**,
-  el nombre se cambia en `styles/hinetly.css` (busca `portada-garfield`).
-- La portada se ve **a pantalla completa de fondo en el celular** y **a la
-  derecha (en horizontal) en computadora**. Una foto vertical funciona bien en
-  ambos.
-- Hay una guía rápida dentro de la propia carpeta: `assets/products/LEEME.txt`.
-
 ---
 
 ## 4. Si cambias algo y NO se ve actualizado
@@ -159,7 +133,6 @@ lib/hinetly-main.js              Las animaciones e interacciones.
 lib/hinetly-gsap.min.js          Librería de animación (local, no usa internet).
 lib/hinetly-scrolltrigger.min.js Animaciones al hacer scroll (local).
 assets/portfolio/                Imágenes de los proyectos del portafolio.
-assets/products/                 ⭐ Fotos de la tienda de peluches y la portada.
 .htaccess                        Ajustes del servidor (caché, seguridad). Opcional.
 ```
 
